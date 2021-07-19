@@ -17,6 +17,7 @@ namespace server
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
             services.AddSignalR()
                 .AddJsonProtocol(options => {
                     options.PayloadSerializerOptions.PropertyNamingPolicy = null;
@@ -53,6 +54,7 @@ namespace server
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapHub<DataHub>("/datahub");
+                endpoints.MapControllers();
             });
         }
     }
