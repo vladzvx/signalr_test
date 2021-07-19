@@ -1,0 +1,9 @@
+C:\work\SingnalRLearning\Chat.Common\bin\Debug\netcoreapp3.1\Chat.Common.deps.json
+C:\work\SingnalRLearning\Chat.Common\bin\Debug\netcoreapp3.1\Chat.Common.dll
+C:\work\SingnalRLearning\Chat.Common\bin\Debug\netcoreapp3.1\Chat.Common.pdb
+C:\work\SingnalRLearning\Chat.Common\obj\Debug\netcoreapp3.1\Chat.Common.AssemblyInfoInputs.cache
+C:\work\SingnalRLearning\Chat.Common\obj\Debug\netcoreapp3.1\Chat.Common.AssemblyInfo.cs
+C:\work\SingnalRLearning\Chat.Common\obj\Debug\netcoreapp3.1\Chat.Common.csproj.CoreCompileInputs.cache
+C:\work\SingnalRLearning\Chat.Common\obj\Debug\netcoreapp3.1\Chat.Common.dll
+C:\work\SingnalRLearning\Chat.Common\obj\Debug\netcoreapp3.1\Chat.Common.pdb
+C:\work\SingnalRLearning\Chat.Common\obj\Debug\netcoreapp3.1\Chat.Common.csprojAssemblyReference.cache
