@@ -52,7 +52,7 @@ namespace server
             app.UseCors("AllowAllCors");
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapHub<ChatHub>("/datahub");
+                endpoints.MapHub<DataHub>("/datahub");
             });
         }
     }

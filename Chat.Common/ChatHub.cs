@@ -10,9 +10,9 @@ namespace Chat.Common
         public DateTime dateTime { get; set; } = DateTime.UtcNow;
         public string Text { get; set; }
     }
-    public class ChatHub : Hub
+    public class DataHub : Hub
     {
-        public ChatHub(TestSingletone testSingletone)
+        public DataHub(TestSingletone testSingletone)
         {
             int q = 0;
         }
