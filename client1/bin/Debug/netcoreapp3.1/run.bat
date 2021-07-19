@@ -1,1 +1,0 @@
-start client1.exe http://192.168.14.196:5000/chat
