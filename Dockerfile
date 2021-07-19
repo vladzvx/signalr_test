@@ -12,7 +12,7 @@ COPY ["Chat.Common/Chat.Common.csproj", "Chat.Common/"]
 RUN dotnet restore "server/server.csproj"
 COPY . .
 WORKDIR "/src/server"
-RUN dotnet build "Bot.Service.csproj" -c Release -o /app/build
+RUN dotnet build "server.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "server.csproj" -c Release -o /app/publish
