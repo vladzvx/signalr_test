@@ -17,7 +17,7 @@ namespace client1
             string url;
             if (args.Length == 0)
             {
-                url = "http://87.247.157.64:5000/datahub";
+                url = "http://87.247.157.64:5002/datahub";
             }
             else
             {
