@@ -31,3 +31,12 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: vladzvx/signalr-test:server
+          
+      - name: Build and push
+        id: docker_build2
+        uses: docker/build-push-action@v2
+        with:
+          context: ./
+          file: ./DockerfileSite
+          push: true
+          tags: vladzvx/signalr-test:site
