@@ -28,11 +28,13 @@ namespace IASK.DataHub.Services
         #region server methods
         public async Task LogIn(BaseModel authRequest)
         {
+            Console.WriteLine(authRequest.Permit.authkey);
             if (await dataHubState.TryLogIn(authRequest.Permit.authkey,Context.ConnectionId))
             {
                 var groups = await dataHubState.GetMyGroups(Context.ConnectionId);
                 for (int i = 0; i < groups.Length; i++)
                 {
+                    Console.WriteLine("Group id: " + groups[i].Id.ToString());
                     await Groups.AddToGroupAsync(Context.ConnectionId, groups[i].Id.ToString());
                 }
             }
@@ -43,12 +45,15 @@ namespace IASK.DataHub.Services
         }
         public async Task SendToGroup(T data)
         {
+            Console.WriteLine(Context.ConnectionId);
             if (await dataHubState.CheckAutorisation(Context.ConnectionId))
             {
+                Console.WriteLine(Context.ConnectionId);
                 if (data.MessageType != Enums.MessageType.Update && dataHubState.AuthUsers.TryGetValue(Context.ConnectionId, out long userId))
                 {
                     data.UserId = userId;
                     data.Id = await dataHubState.groupsManager.GetLastMessageNumber(data.GroupId);
+                    Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(data));
                 }
                 await Clients.OthersInGroup(data.GroupId.ToString()).SendAsync(data.MessageType.ToString(), data);
                 dataHubState.LogHistory(data);
