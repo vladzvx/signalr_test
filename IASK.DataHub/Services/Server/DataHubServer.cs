@@ -43,6 +43,12 @@ namespace IASK.DataHub.Services
                 Context.Abort();
             }
         }
+
+        public async Task TestBroadcast(T data)
+        {
+            await Clients.Others.SendAsync(data.MessageType.ToString(), data);
+        }
+
         public async Task SendToGroup(T data)
         {
             Console.WriteLine(Context.ConnectionId);

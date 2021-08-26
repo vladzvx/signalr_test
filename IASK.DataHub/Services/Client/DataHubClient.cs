@@ -86,7 +86,7 @@ namespace IASK.DataHub.Services
                             break;
                         }
                 }
-                connection.SendAsync("SendToGroup", new FormMessage() {MessageType = messageType,Text=Text, GroupId= 0/*(long)IdParser.GetNewBigId(123,100)*/}).Wait();
+                connection.SendAsync("TestBroadcast", new ChatMessage() {MessageType = messageType,Text=Text, GroupId= 0/*(long)IdParser.GetNewBigId(123,100)*/}).Wait();
             }
         }
 
