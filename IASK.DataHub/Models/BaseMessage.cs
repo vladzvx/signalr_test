@@ -7,7 +7,7 @@ namespace IASK.DataHub.Models
 {
     public abstract class BaseMessage
     {
-        public DateTime DateTime { get; set; } = DateTime.UtcNow;
+       // public DateTime DateTime { get; set; } = DateTime.UtcNow;
         public long Id { get; set; }
         public long GroupId { get; set; }
         public long UserId { get; set; }

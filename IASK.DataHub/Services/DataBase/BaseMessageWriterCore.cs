@@ -29,7 +29,7 @@ namespace IASK.DataHub.Services
         {
             command.Parameters["_message_id"].Value =data.Id;
             command.Parameters["_group_id"].Value =data.GroupId;
-            command.Parameters["_time"].Value =data.DateTime;
+            command.Parameters["_time"].Value =DateTime.UtcNow;
             command.Parameters["_user_id"].Value =data.UserId;
             command.Parameters["_data"].Value = Newtonsoft.Json.JsonConvert.SerializeObject(data);
             await command.ExecuteNonQueryAsync(token);
