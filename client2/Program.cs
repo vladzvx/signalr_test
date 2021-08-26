@@ -19,7 +19,7 @@ namespace client2
             {
                 url = args[0];
             }
-            DataHubClient<ChatMessage> client = new DataHubClient<ChatMessage>(url);
+            DataHubClient<ChatMessage> client = new DataHubClient<ChatMessage>();
             client.StartText("jexVxyTKswbhRzqVMYNNMexZ");
 
         }
