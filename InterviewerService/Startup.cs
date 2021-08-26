@@ -34,7 +34,7 @@ namespace InterviewerService
             //FormMailing.ConfigureServices(services);
             Chat.ConfigureServices(services);
             //services.AddCors();
-            //services.AddControllers();
+            services.AddControllers();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -47,7 +47,7 @@ namespace InterviewerService
             Chat.Configure(app,env);
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllers();
+                endpoints.MapControllers();
             });
         }
     }
