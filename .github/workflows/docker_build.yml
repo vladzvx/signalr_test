@@ -31,3 +31,17 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: vladzvx/signalr-test:server
+          
+      - name: deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: 87.247.157.64
+          username: root
+          password : MfjCQknxS6
+          port: 22
+          script: |
+            docker stop signalr_test
+            docker rm signalr_test
+            docker login -u  vladzvx -p QW12cv9001Qw_
+            docker pull vladzvx/signalr-test:server
+            docker run --name signalr_test -d -p 5000:5000 vladzvx/signalr-test:server
