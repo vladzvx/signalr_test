@@ -33,8 +33,10 @@ namespace IASK.DataHub.Services
         }
         #endregion
 
-        public DataHubClient(string url= "http://localhost:5000/wss/chat")
+        public DataHubClient(string url= "http://localhost:55009/wss/chat")
         {
+            Thread.Sleep(4000);
+            url = "http://87.247.157.64:5000/wss/chat";
             //url = "https://signalr-tests.ru:5002/wss/chat";
             connection = new HubConnectionBuilder()
                 .WithUrl(url).AddJsonProtocol(options => {
