@@ -18,7 +18,8 @@ namespace client1
             if (args.Length == 0)
             {
                 //url = "https://service.socmedica.dev:9015/datahub";
-                url = "http://localhost:5000/datahub";
+                //url = "http://localhost:5000/datahub";
+                url = "https://signalr-tests.ru:5002/datahub";
             }
             else
             {
