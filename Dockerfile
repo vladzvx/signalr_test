@@ -4,7 +4,6 @@ EXPOSE 5000
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["nuget.config", "."]
 COPY ["server/server.csproj", "server/"]
 COPY ["Chat.Common/Chat.Common.csproj", "Chat.Common/"]
 RUN dotnet restore "server/server.csproj"
