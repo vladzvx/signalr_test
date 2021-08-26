@@ -103,7 +103,7 @@ namespace IASK.DataHub.Services
         }
         public override async Task OnDisconnectedAsync(Exception exception)
         {
-            dataHubState.AuthUsers.TryRemove(Context.ConnectionId, out _);
+            //dataHubState.AuthUsers.TryRemove(Context.ConnectionId, out _);
             await base.OnDisconnectedAsync(exception);
         }
     }
