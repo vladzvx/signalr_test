@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Chat.Common\Chat.Common.csproj" />
+    <ProjectReference Include="..\IASK.DataHub\IASK.DataHub.csproj" />
   </ItemGroup>
 
   <ItemGroup>

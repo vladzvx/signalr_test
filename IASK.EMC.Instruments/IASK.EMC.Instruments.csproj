@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EMCCore" Version="1.0.2.9" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+    <PackageReference Include="UMKBRequests" Version="0.0.180" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IASK.Common\IASK.Common.csproj" />
+    <ProjectReference Include="..\IASK.DataStorage\IASK.DataStorage.csproj" />
+    <ProjectReference Include="..\IASK.ETIntegration\IASK.ETIntegration.csproj" />
+  </ItemGroup>
+
+</Project>

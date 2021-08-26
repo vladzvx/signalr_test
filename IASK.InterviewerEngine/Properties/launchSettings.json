@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "IASK.InterviewerEngine": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Executable"
+    }
+  }
+}

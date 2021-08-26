@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.0" />
+    <PackageReference Include="UMKBRequests" Version="0.0.180" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IASK.InterviewerEngine\IASK.InterviewerEngine.csproj" />
+    <ProjectReference Include="..\IASK.InterviewerEngine\IASK.InterviewerEngine.csproj" />
+  </ItemGroup>
+
+</Project>
