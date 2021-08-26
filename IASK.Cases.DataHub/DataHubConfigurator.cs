@@ -60,7 +60,7 @@ namespace IASK.Cases.DataHub
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapHub<DataHubService<T>>(path);
-                //endpoints.MapControllers();
+                endpoints.MapControllers();
             });
         }
     }
