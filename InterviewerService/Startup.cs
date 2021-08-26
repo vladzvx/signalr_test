@@ -31,8 +31,8 @@ namespace InterviewerService
             //EMCWriter.ConfigureServices(services);
             //JsonStorage.ConfigureServices(services);
             //Semantic.ConfigureServices(services);
-            FormMailing.ConfigureServices(services);
-            //Chat.ConfigureServices(services);
+            //FormMailing.ConfigureServices(services);
+            Chat.ConfigureServices(services);
             //services.AddCors();
             //services.AddControllers();
         }
@@ -43,8 +43,8 @@ namespace InterviewerService
                 app.UseDeveloperExceptionPage();
             }
             app.UseRouting();
-            FormMailing.Configure(app,env);
-            //Chat.Configure(app,env);
+            //FormMailing.Configure(app,env);
+            Chat.Configure(app,env);
             app.UseEndpoints(endpoints =>
             {
                 //endpoints.MapControllers();

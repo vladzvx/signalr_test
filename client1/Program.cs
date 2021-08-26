@@ -18,7 +18,8 @@ namespace client1
             string url;
             if (args.Length == 0)
             {
-                url = "https://service.socmedica.dev:9018/wss/formmailing";
+                //url = "https://service.socmedica.dev:9018/wss/formmailing";
+                url = "https://signalr-tests.ru:5002/wss/chat";
                 //url = "http://localhost:5000/wss/formmailing";
             }
             else
