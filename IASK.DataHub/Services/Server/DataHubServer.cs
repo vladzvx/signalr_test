@@ -46,7 +46,7 @@ namespace IASK.DataHub.Services
 
         public async Task TestBroadcast(T data)
         {
-            await Clients.Others.SendAsync(data.MessageType.ToString(), data);
+            await Clients.All.SendAsync("TestBroadcast", data);
         }
 
         public async Task SendToGroup(T data)

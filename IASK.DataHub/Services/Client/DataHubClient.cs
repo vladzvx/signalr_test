@@ -35,7 +35,7 @@ namespace IASK.DataHub.Services
 
         public DataHubClient(string url= "http://localhost:5000/wss/chat")
         {
-            url = "https://signalr-tests.ru:5002/wss/chat";
+            //url = "https://signalr-tests.ru:5002/wss/chat";
             connection = new HubConnectionBuilder()
                 .WithUrl(url).AddJsonProtocol(options => {
                     options.PayloadSerializerOptions.PropertyNamingPolicy = null;
@@ -46,9 +46,9 @@ namespace IASK.DataHub.Services
         public void StartText(string auth)
         {
             connection.StartAsync().Wait();
-            connection.On<T>(MessageType.New.ToString(), messageHandler);
-            connection.On<T>(MessageType.Acknowledged.ToString(), acknowledgedHandler);
-            connection.On<T>(MessageType.Update.ToString(), updateHandler);
+            connection.On<T>("TestBroadcast", messageHandler);
+            //connection.On<T>(MessageType.Acknowledged.ToString(), acknowledgedHandler);
+            //connection.On<T>(MessageType.Update.ToString(), updateHandler);
 
             //Console.WriteLine("Write your id:");
             //connection.SendAsync("LogIn", new TestModel() { Permit = new UMKBRequests.Models.API.Codes.Permit (){authkey= auth } }).Wait();
@@ -95,9 +95,6 @@ namespace IASK.DataHub.Services
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             await connection.StartAsync();
-            connection.On<T>(MessageType.New.ToString(), messageHandler);
-            connection.On<T>(MessageType.Acknowledged.ToString(), acknowledgedHandler);
-            connection.On<T>(MessageType.Update.ToString(), updateHandler);
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
