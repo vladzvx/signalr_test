@@ -1,0 +1,27 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:10572",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "server": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ConncetionString": "User ID=iask;Password=afckEQmSNBUuiKtgn8fBMnelvkLhRPPo;Host=178.176.38.245;Port=10555;Database=iask;Pooling=true;Timeout=30;CommandTimeout=0;",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    }
+  }
+}

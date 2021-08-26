@@ -1,0 +1,10 @@
+image: docker:stable
+variables:
+    PROJECT: "iask"
+    KEYS_DEV: "-p 127.0.0.1:9015:5000"
+    KEYS_PROD: "-p 127.0.0.1:9015:5000"
+
+include: 
+  - project: 'root/template-gitlab'
+    ref: master
+    file: '/service-backend-file-pass-gitlab-ci.yml'
