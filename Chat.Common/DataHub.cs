@@ -10,6 +10,12 @@ namespace Chat.Common
         public DateTime dateTime { get; set; } = DateTime.UtcNow;
         public string Text { get; set; }
     }
+
+    public class Message2
+    {
+        public DateTime dateTime { get; set; } = DateTime.UtcNow;
+        public string Text { get; set; }
+    }
     public class DataHub : Hub
     {
         public DataHub()
@@ -25,6 +31,14 @@ namespace Chat.Common
             await this.Clients.Caller.SendAsync("Self", message);
         }
 
+        public async Task SendMessage2(Message message)
+        {
+            await this.Clients.All.SendAsync("SendMessage2", message);
+        }
+        public async Task Self2(Message message)
+        {
+            await this.Clients.Caller.SendAsync("Self2", message);
+        }
         public override async Task OnConnectedAsync()
         {
             await base.OnConnectedAsync();

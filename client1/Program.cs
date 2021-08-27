@@ -20,6 +20,7 @@ namespace client1
                 //url = "https://service.socmedica.dev:9015/datahub";
                 //url = "http://localhost:5000/datahub";
                 url = "https://signalr-tests.ru:5002/datahub";
+                //url = "http://87.247.157.64:5000/datahub";
             }
             else
             {
