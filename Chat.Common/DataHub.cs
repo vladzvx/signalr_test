@@ -20,6 +20,10 @@ namespace Chat.Common
         {
             await this.Clients.All.SendAsync("SendMessage", message);
         }
+        public async Task Self(Message message)
+        {
+            await this.Clients.Caller.SendAsync("Self", message);
+        }
 
         public override async Task OnConnectedAsync()
         {

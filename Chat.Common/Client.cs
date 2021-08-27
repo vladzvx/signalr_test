@@ -24,6 +24,7 @@ namespace Chat.Common
                 .Build();
             connection.StartAsync().Wait();
             connection.On<Message>("SendMessage", MessageHandler);
+            connection.On<Message>("Self", MessageHandler);
         }
 
         public void StartText()
@@ -32,6 +33,7 @@ namespace Chat.Common
             while (true)
             {
                 connection.SendAsync("SendMessage", new Message() {Text = Console.ReadLine() }).Wait();
+                connection.SendAsync("Self", new Message() { Text = Console.ReadLine() }).Wait();
             }
         }
 
