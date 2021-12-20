@@ -35,13 +35,13 @@ jobs:
       - name: deploy
         uses: appleboy/ssh-action@master
         with:
-          host: 87.247.157.64
-          username: root
-          password : MfjCQknxS6
+          host: ${{ secrets.HOST_IP }}
+          username: ${{ secrets.HOST_USER }}
+          password : ${{ secrets.HOST_PWD }}
           port: 22
           script: |
             docker stop signalr_test
             docker rm signalr_test
-            docker login -u  vladzvx -p QW12cv9001Qw_
+            docker login -u  ${{ secrets.DOCKER_HUB_LOGIN }} -p ${{ secrets.DOCKER_HUB_TOKEN }}
             docker pull vladzvx/signalr-test:server
             docker run --name signalr_test -d -p 5000:5000 vladzvx/signalr-test:server
