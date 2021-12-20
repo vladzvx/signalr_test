@@ -19,7 +19,8 @@ x64/
 x86/
 env/
 bld/
-
+[Bb]in/
+[Oo]bj/
 [Ll]og/
 output/
 
