@@ -11,6 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "client1", "client1\client1.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSite", "TestSite\TestSite.csproj", "{D6FA5251-D6D8-4AA1-A80F-0BA4514A712E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx configs", "nginx configs", "{DC985639-879F-4411-9930-7000507A5B7C}"
+	ProjectSection(SolutionItems) = preProject
+		SignalR-nginx.conf = SignalR-nginx.conf
+		WebSite-Nginx.conf = WebSite-Nginx.conf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
