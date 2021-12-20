@@ -13,8 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSite", "TestSite\TestSi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx configs", "nginx configs", "{DC985639-879F-4411-9930-7000507A5B7C}"
 	ProjectSection(SolutionItems) = preProject
-		SignalR-nginx.conf = SignalR-nginx.conf
-		WebSite-Nginx.conf = WebSite-Nginx.conf
+		nginx\SignalR-nginx.conf = nginx\SignalR-nginx.conf
+		nginx\WebSite-Nginx.conf = nginx\WebSite-Nginx.conf
 	EndProjectSection
 EndProject
 Global
